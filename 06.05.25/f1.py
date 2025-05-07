@@ -1,7 +1,6 @@
 # PROGRAMA PARA CALCULAR MOVIMENTO RETÍLIO E SOLICITAR OS VALORES AO USUÁRIO
 # DADOS: veloc_inicial em 'm/s', aceleração em 'm/s ** 2', tempo em 's'
 
-from os import system
 import sys
 
 veloc_inicial = int(input('Digite o valor de veloc_inicial em m/s: '))
