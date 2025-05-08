@@ -1,0 +1,19 @@
+# PROGRAMA PARA CLASSIFICAR UM TRIÂNGULO QUANTO AOS ÂNGULOS.
+
+# O PROGRAMA DEVERÁ SOLICITAR 3 ÂNGULOS INTEIROS POSITIVOS;
+# PARA SER UM TRIÂNGULO, A SOMA DOS ÂNGULOS DEVE SER IGUAL A 180;
+
+# RETÂNGULO: POSSUI UM ÂNGULO INTERNO RETO (IGUAL A 90).
+# OBTUSÂNGULO: POSSUI UM ÂNGULO INTERNO OBTUSO (MAIOR QUE 90).
+# ACUTÂNGULO: POSSUI TODOS OS ÂNGULOS INTERNOS AGUDOS(MENORES QUE 90).
+
+import sys
+
+angulo1 = int(input('Informe o ângulo 1 do triângulo: '))
+
+angulo2 = int(input('Informe o ângulo 2 do triângulo: '))
+
+angulo3 = int(input('Informe o ângulo 3 do triângulo: '))
+
+
+
