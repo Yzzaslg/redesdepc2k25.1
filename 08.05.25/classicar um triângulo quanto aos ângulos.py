@@ -15,5 +15,7 @@ angulo2 = int(input('Informe o ângulo 2 do triângulo: '))
 
 angulo3 = int(input('Informe o ângulo 3 do triângulo: '))
 
+a
+
 
 
