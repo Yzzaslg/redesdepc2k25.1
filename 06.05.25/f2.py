@@ -18,12 +18,16 @@ if acele_inicial <= 0:
 distancia_inicial *= 1000
 Veloc_inicial /= 3.6
 
-delta = Veloc_inicial ** 2 - 4 * acele_inicial * distancia_inicial
+print(distancia_inicial)
+print(Veloc_inicial)
+
+delta = round(round(Veloc_inicial) ** 2 - ( 4 * acele_inicial * distancia_inicial ))
+print(delta)
 if acele_inicial < 0:
     sys.exit('Não é possível calcular o tempo')
 
-t = ( -Veloc_inicial + delta ** 0.5) / (2 * acele_inicial )
-
+t =  round(( -Veloc_inicial + delta ** 0.5 ) / ( 2 * acele_inicial ))
+print(t)
 hora = t//3600
 
 t = t%3600
