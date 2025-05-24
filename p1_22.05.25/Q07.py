@@ -31,6 +31,8 @@ try:
 
 except ValueError:
     sys.exit('Digite apenas valores reais.')
+except Exception as excecao:
+    print(f'ERRO> {excecao}')
 
 # converter com datetime em um objeto as datas.
 data_nasc = datetime.datetime(ano_nasc, mes_nasc, dia_nasc)
@@ -40,8 +42,12 @@ data_contri = datetime.datetime(ano_ini_contri, mes_ini_contri, dia_ini_contri)
 hoje = datetime.datetime.today() # vai servir para comparar com as próximas datas.
 
 # Calcular as datas
-idade = hoje.year - data_nasc.year - ((hoje.month, hoje.day) < (data_nasc.month, data_nasc.day))
-tempo_contri = hoje.year - data_contri.year - ((hoje.month, hoje.day) < (data_contri.month, data_contri.day))
+idade = hoje.year - data_nasc.year # verifica se o aniversário já aconteceu no ano atual, se sim ()<() = 0, se não, ()<() = 1.
+if ((hoje.month < data_nasc.month) or ( hoje.month == data_nasc.month and hoje.day < data_nasc.day)):
+    idade = idade - 1
+tempo_contri = hoje.year - data_contri.year
+if ((hoje.month < data_contri.month) or ( hoje.month == data_contri.month and hoje.day < data_contri.day)):
+    tempo_contri = tempo_contri - 1
 
 # Condição da idade minimia masculina (65 anos ) e feminina (62 anos ).
 idade_minima_feminino = 62 # 62 anos
