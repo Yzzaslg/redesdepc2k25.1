@@ -52,3 +52,5 @@ try:
 
 except ValueError:
     sys.exit('Digite apenas valores reais.')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')

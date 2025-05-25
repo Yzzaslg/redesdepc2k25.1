@@ -32,7 +32,7 @@ try:
 except ValueError:
     sys.exit('Digite apenas valores reais.')
 except Exception as excecao:
-    print(f'ERRO> {excecao}')
+    print(f'ERRO: {excecao}')
 
 # converter com datetime em um objeto as datas.
 data_nasc = datetime.datetime(ano_nasc, mes_nasc, dia_nasc)

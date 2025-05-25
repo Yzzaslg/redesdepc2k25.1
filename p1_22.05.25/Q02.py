@@ -18,6 +18,8 @@ try:
     valorcent = int(round(valor * 100))
 except ValueError:
         sys.exit('ERRO: Informe um valor que possa ser convertido em inteiro')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')
     
 # Informando quantidade de cédulas:
 v100 = valorcent // 10000

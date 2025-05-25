@@ -22,8 +22,11 @@ try:
 
 except ValueError:
     print('ERRO: Informe um valor que possa ser convertido em inteiro')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')
 
 # Solicitando a soma:
 else:
     print(f'A Soma dos digitos de {mil} + {cem} + {dez} + {numero} é: {soma}')
+
     

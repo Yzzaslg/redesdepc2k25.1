@@ -77,6 +77,8 @@ try:
 
 except ValueError:
     sys.exit('Digite apenas valores reais para combustivel em litros, valor do combustível e distância.')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')
 
 # Converter o tempo em horas
 tempo_viagem_total_h = tempo_viagem_total_min / 60

@@ -56,3 +56,5 @@ try:
 
 except ValueError:
     print('Informe um valor válido')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')

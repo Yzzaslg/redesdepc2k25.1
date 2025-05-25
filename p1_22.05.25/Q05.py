@@ -26,6 +26,8 @@ try:
 
 except ValueError:
     sys.exit('Informe valores inteiros para horas e minutos.')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')
 
 print(f'Tempo de permanência no estacionamento:{horas:02d}h e {minutos:02d}min')
 
