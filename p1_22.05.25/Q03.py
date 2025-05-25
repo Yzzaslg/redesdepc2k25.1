@@ -53,6 +53,8 @@ try:
 
 except ValueError:
     sys.exit('Digite apenas valores inteiros para horas e minutos.')
+except Exception as excecao:
+    print(f'ERRO: {excecao}')
 
 # Converter os valores para minutos 
 movi_ini_min = partida_h * 60 + partida_min
