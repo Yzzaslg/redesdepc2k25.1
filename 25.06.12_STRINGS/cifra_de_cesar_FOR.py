@@ -17,5 +17,21 @@
    EXEMPLO: 
       Digite a Mensagem .....: Olá, Mundo 2025!
       Informe o Deslocamento : 6
-      Mensagem cifrada ......: Urç2&S{tju&868;'
-'''
+      Mensagem cifrada ......: Urç2&S{tju&868;'''
+
+import sys
+
+try:
+   strTexto        = input('Digite a mensagem ..............: ')
+   intDeslocamento = int(input('Digite o deslocamento (inteiro) : '))
+except ValueError:
+   sys.exit('ERRO: Informe um inteiro válido...')
+except Exception as e:
+   sys.exit(f'ERRO: {e}')
+else:                       
+   strTextoCifra = ''
+   for strLetra in strTexto:
+      intCodigo      = ord(strLetra) + intDeslocamento
+      strTextoCifra += chr(intCodigo)
+
+   print(f'\nMensagem cifrada ...............: {strTextoCifra}')

@@ -1,3 +1,13 @@
+'''
+   Fazer um programa que solicite ao usuário nomes de alunos e 2 notas para cada aluno.
+
+   As notas devem ser inteiras entre 0 e 100 (inclusive). 
+
+   O programa deverá parar de solicitar nomes quando o usuário digitar 'FIM'.
+
+   No final o programa deverá listar os nomes informados e suas respectivas notas.
+'''
+
 lstAlunos = list()
 lstNotas_1 = list()
 lstNotas_2 = list()
@@ -23,6 +33,12 @@ while True:
         elif intNota_2 < 0 or intNota_2 > 100:
             print('ERRO: Nota inválida, informe entre 0 e 100...')
         else:
-            # TODO: Adicionar o nome e as notas de alunos apenas na lista listAlunos.
             lstAlunos.append(strNome)
+            lstNotas_1.append(intNota_1)
+            lstNotas_2.append(intNota_2)
+
+# Imprimindo os valores informados.
+print(lstAlunos)
+print(lstNotas_1)
+print(lstNotas_2)
         
