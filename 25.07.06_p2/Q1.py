@@ -16,13 +16,14 @@ try:
     if massa_inicial <= 0:
         sys.exit('Digite um valor positivo!')
 except ValueError:
-   sys.exit('Informe apenas valores reais para a massa do material que vai sofrer decaimento.')
+    sys.exit('Informe apenas valores reais para a massa do material que vai sofrer decaimento.')
 except Exception as e:
-   sys.exit(f'ERRO: {e}')
+    sys.exit(f'ERRO: {e}')
 
 # Definindo as variáveis.
-tempo_total = 0
-massa_decaimento = massa_inicial
+else:
+    tempo_total = 0
+    massa_decaimento = massa_inicial
 
 while massa_decaimento >= 0.5:
     massa_decaimento /= 2 # dividir a massa pela metade ( meia vida ).
