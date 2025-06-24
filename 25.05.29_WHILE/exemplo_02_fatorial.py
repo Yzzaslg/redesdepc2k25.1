@@ -1,4 +1,4 @@
-'''
+'''''
    Considerando que o fatorial de um número é dado por:
 
    n!= n * (n-1) * (n-2) * (n-3) * … * 1
@@ -6,6 +6,7 @@
    Faça um programa que solicite um valor inteiro ao usuário e 
    em seguida calcule e exiba o fatorial do número informado.
 '''
+
 import sys
 
 try:
