@@ -33,10 +33,8 @@ while True:
     else:
       if intNota_1 < 0 or intNota_1 > 100:
          print('ERRO: Nota inválida. Informe entre 0 e 100...')
-         continue
       elif intNota_2 < 0 or intNota_2 > 100:
          print('ERRO: Nota inválida. Informe entre 0 e 100...')
-         continue # volta ao início do loop.
       else:
          # TODO: Adicionar o nome e as notas dos alunos apenas na lista lstAlunos 
          lstAlunos.append(strNome)
