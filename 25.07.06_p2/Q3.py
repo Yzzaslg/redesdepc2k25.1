@@ -16,7 +16,8 @@ except Exception as e:
     sys.exit(f'ERRO: {e}')
 
 # 'n' vai começar em 1.
-n = 1
+else:
+    n = 1
 
 while n * ( n + 1 ) / 2 <= num:
 # Definição do número triangular: Tn = 1+2+3+⋯+n = n(n+1)/2.    
