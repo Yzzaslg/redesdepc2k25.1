@@ -30,4 +30,4 @@ while n * ( n + 1 ) / 2 <= num:
 else:
     print('Puts! O número informado não é triangular.')
 
-print('--- Fim do programa, obrigado pelo teste!"-" ---')
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')

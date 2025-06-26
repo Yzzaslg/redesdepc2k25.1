@@ -40,4 +40,4 @@ if soma == num:
 else:
     print(f'{num} não é um número de Armstrong!')
 
-print('--- Fim do programa, obrigado pelo teste! =D ---')
+print('\n--- Fim do programa, obrigado pelo teste! =D ---')

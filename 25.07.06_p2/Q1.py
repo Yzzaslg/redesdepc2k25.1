@@ -42,6 +42,7 @@ segundos = tempo_total
 print(f'Massa inicial ( em gramas ):{massa_inicial:.2f} gramas.')
 print(f'Massa final ( em gramas ): {massa_final:.2f} gramas.')
 print(f'Tempo total de decaimento: {horas:02d}h:{minutos:02d}min:{segundos:02d}seg')
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
 
 
 

@@ -5,8 +5,12 @@
 
       2) Gere uma lista com N valores inteiros aleatórios entre -100 e +100;
    
-      3) A partir da lista gerada, gere uma segunda uma lista apenas com os 
-         números pares da lista;
+      3) A partir da lista gerada, gere uma segunda uma lista onde cada posição será 
+         uma sub-lista com 3 posições:
+
+         a) A primeira posição será o número anterior ao número da lista inicial;
+         b) A segunda posição será o número da lista inicial; 
+         c) A terceira posição será o número seguinte ao númerio da lista inicial.
 '''
 import sys, random
 
@@ -29,26 +33,4 @@ else:
 
     lstN.sort()
 
-# Criar a lista com números pares.
-    lstN_par = list()    
-
-    for Npares in lstN:
-        if Npares % 2 == 0:
-            lstN_par.append(Npares)
-
-    lstN_par.sort()
-
-# Resultado.
-print('--- Resultado ---')
-print(f'\nLista original: {lstN}')
-print(f'Lista com números pares: {lstN_par}')
-print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
-
-
-
- 
-
-
-    
-    
-    
+# Criar uma lista com 3 posições:
