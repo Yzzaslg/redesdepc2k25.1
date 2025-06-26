@@ -29,8 +29,21 @@ else:
     lstN = list()
 
     for _ in range (intN):
-        lstN.append(random.randint(-100, 100))
+        intV = random.randint(-100, 100)
+        lstN.append(intV)
 
     lstN.sort()
 
 # Criar uma lista com 3 posições:
+    lstTrio = list()
+
+    for intV in lstN :
+        lstTrio.append([intV-1, intV, intV+1])
+
+
+
+# Resultado:
+print('--- Resultado ---')
+print(f'\nLista original: {lstN}')
+print(f'Lista secundária: {lstTrio}')
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
