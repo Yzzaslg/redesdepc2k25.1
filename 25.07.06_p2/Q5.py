@@ -35,7 +35,7 @@ for posicao in range(len(string1)):
     bit1 = string1[posicao] # Deve usar [] - colchetes, pois servem para acessar elementos em um indice ( posicao ) em strings.
     bit2 = string2[posicao]
 
-# Converter cada caractere bit em inteiro para realizar cálculos com 0 e 1.
+# Converter cada caractere bit em inteiro para a realização de cálculos.
     bit1 = int(string1[posicao])
     bit2 = int(string2[posicao])
 
