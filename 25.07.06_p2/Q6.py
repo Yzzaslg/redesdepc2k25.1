@@ -37,7 +37,7 @@ else:
     Q_zeros = 4 - tamanho
 
 # Criar a string para completar os zeros.
-    zero = ''
+    zeros = ''
     for posicao in range(Q_zeros):
         zeros = zeros + '0'
 
@@ -54,6 +54,70 @@ for caractere in string_numero:
 
 if repetição == len(string_numero): # A contagem da repetição de digitos for igual ao tamanho total, todos são iguais.
     sys.exit('A Constante de Kaprekar não é bem sucedida com todos os digitos iguais. ')
+
+iteracoes = 0 # Contador das interacoes
+Kaprekar = 0 # Inicialização diferente de 6174 para o loop funcionar.
+
+# Criar o loop que enquanto 'kaprekar' não for igual a 6174 irá continuar rodando.
+while Kaprekar != 6174:
+    str_num = string_numero
+    strdecrescente = ''
+
+    while str_num:
+# Criar a ordenação crescente e decrescente.    
+# Encontrar o maior digito.
+        maior_digito = str_num[0]
+        for caractere in str_num:
+            if caractere > maior_digito:
+                maior_digito = caractere
+
+# Remover a primeira ocorrência de 'maior_digito'.
+        string_nova = ''
+        removido = False
+        for caractere in str_num:
+            if caractere == maior_digito and not removido:
+                removido = True
+                continue
+            string_nova = string_nova + caractere
+
+# Ordem decrescente:
+        strdecrescente = strdecrescente + maior_digito
+        str_num = string_nova
+
+# Ordem crescente ( inverter a string 'decrescente' ).
+    strcrescente = ''
+    for caractere in reversed(strdecrescente):
+        strcrescente = strcrescente + caractere
+
+# Convertendo as strings em inteiros.
+    num_decrescente = int(strdecrescente)
+    num_crescente = int (strcrescente)
+
+# Operação de subtração decresc - cresc = kaprekar.
+    Kaprekar = num_decrescente - num_crescente
+
+# Transformar a operação em string e completar com 0's a esquerda.
+    resultado_operação = str(Kaprekar)
+    while len(resultado_operação) < 4:
+        resultado_operação = '0' + resultado_operação
+
+# Atualização para próxima interação.
+    string_numero = resultado_operação
+    iteracoes = iteracoes + 1
+
+# Resultado das iterações.
+    print(f'Iteração {iteracoes}: {strdecrescente} - {strcrescente} = {resultado_operação}')
+
+# Condição do loop impossível: kaprekar = 0000.
+    if Kaprekar == 0:
+        sys.exit('O loop se tornou impossível, retornou 0000.')
+
+if Kaprekar == 6174:
+    print(f"\nConvergiu para 6174, número de {iteracoes} iterações.")
+else:
+    print("\nO processo terminou sem convergir para 6174.")
+
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
 
 
 
