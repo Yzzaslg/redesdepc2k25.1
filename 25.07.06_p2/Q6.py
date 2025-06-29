@@ -58,6 +58,8 @@ if repetição == len(string_numero): # A contagem da repetição de digitos for
 iteracoes = 0 # Contador das interacoes
 Kaprekar = 0 # Inicialização diferente de 6174 para o loop funcionar.
 
+print('Iterações:')
+
 # Criar o loop que enquanto 'kaprekar' não for igual a 6174 irá continuar rodando.
 while Kaprekar != 6174:
     str_num = string_numero
