@@ -12,7 +12,7 @@ palavra = palavra_chave.lower() # Assim letras maiúsculas e minúsculas são tr
 # Criar string do andamento do jogo.
 progresso = ''
 
-# Verificar se tem a letra na palavra.
+# Verifica a string 'palavra_chave', mostrando '_' para cada letra e espaço ' ' onde há espaço e inicializando o 'progresso' vazio.
 for caractere in palavra_chave:
     if caractere == ' ':
         progresso = progresso + ' '
