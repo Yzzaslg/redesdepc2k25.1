@@ -13,8 +13,8 @@ try:
     
     string1 = string1.zfill(8)
     string2 = string2.zfill(8)
-    if len(string1) != 8 or len(string2) != 8:
-        sys.exit("Cada string deve ter 8 dígitos.") # len() vai verificar o tamanho das strings.
+    if len(string1) != 8 or len(string2) != 8: # len() vai verificar o tamanho das strings.
+        sys.exit("Cada string deve ter 8 dígitos.") 
 except Exception as e:
     sys.exit(f'ERRO: {e}')
 
