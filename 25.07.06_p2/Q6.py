@@ -60,7 +60,7 @@ while Kaprekar != 6174:
     strcrescente = ''.join(sorted(str_num)) # Sorted = ordena a string em ordem númerica e a transforma em uma lista temp, e .join irá converter essa lista temp em string novamente.
 
 # Ordem decrescente ( inverter a string 'decrescente' ).
-    strdecrescente = ''.join(sorted(string_numero, reverse=True))
+    strdecrescente = ''.join(sorted(str_num, reverse=True))
 
 # Convertendo as strings em inteiros.
     num_decrescente = int(strdecrescente)
