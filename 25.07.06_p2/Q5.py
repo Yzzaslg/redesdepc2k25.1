@@ -8,10 +8,13 @@ import sys
 
 # Solictitar as strings.
 try:
-    string1 = input('Digite uma 1ª sequência binária de 4 digitos: ')
-    string2 = input('Digite uma 2ª sequência binária de 4 digitos: ')
-    if len(string1) != len(string2): # len() vai verificar o tamanho das strings.
-        sys.exit('As strings estão com tamanho diferentes...:/')
+    string1 = input('Digite uma 1ª sequência binária de até 8 digitos: ')
+    string2 = input('Digite uma 2ª sequência binária de até 8 digitos: ')
+    
+    string1 = string1.zfill(8)
+    string2 = string2.zfill(8)
+    if len(string1) != 8 or len(string2) != 8:
+        sys.exit("Cada string deve ter 8 dígitos.") # len() vai verificar o tamanho das strings.
 except Exception as e:
     sys.exit(f'ERRO: {e}')
 

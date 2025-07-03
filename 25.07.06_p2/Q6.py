@@ -33,16 +33,7 @@ else:
     string_numero = str(numero)
 
 # Completar o número com 0's a esquerda.
-    tamanho  = len(string_numero)
-    Q_zeros = 4 - tamanho
-
-# Criar a string para completar os zeros.
-    zeros = ''
-    for posicao in range(Q_zeros):
-        zeros = zeros + '0'
-
-# Adicionar os 0's a string_numero agora.
-string_numero = zeros + string_numero
+string_numero = string_numero.zfill(4)
 
 # Verificar se todos os digítos são repetidos.
 primeiro_digito = string_numero[0]
@@ -63,33 +54,13 @@ print('Iterações:')
 # Criar o loop que enquanto 'kaprekar' não for igual a 6174 irá continuar rodando.
 while Kaprekar != 6174:
     str_num = string_numero
-    strdecrescente = ''
 
-    while str_num:
-# Criar a ordenação crescente e decrescente.    
-# Encontrar o maior digito.
-        maior_digito = str_num[0]
-        for caractere in str_num:
-            if caractere > maior_digito:
-                maior_digito = caractere
+# Criar a ordenação crescente e decrescente.   
+# Ordem crescente:
+    strcrescente = ''.join(sorted(str_num)) # Sorted = ordena a string em ordem númerica e a transforma em uma lista temp, e .join irá converter essa lista temp em string novamente.
 
-# Remover a primeira ocorrência de 'maior_digito'.
-        string_nova = ''
-        removido = False
-        for caractere in str_num:
-            if caractere == maior_digito and not removido:
-                removido = True
-                continue
-            string_nova = string_nova + caractere
-
-# Ordem decrescente:
-        strdecrescente = strdecrescente + maior_digito
-        str_num = string_nova
-
-# Ordem crescente ( inverter a string 'decrescente' ).
-    strcrescente = ''
-    for caractere in reversed(strdecrescente):
-        strcrescente = strcrescente + caractere
+# Ordem decrescente ( inverter a string 'decrescente' ).
+    strdecrescente = ''.join(sorted(string_numero, reverse=True))
 
 # Convertendo as strings em inteiros.
     num_decrescente = int(strdecrescente)
@@ -99,9 +70,7 @@ while Kaprekar != 6174:
     Kaprekar = num_decrescente - num_crescente
 
 # Transformar a operação em string e completar com 0's a esquerda.
-    resultado_operação = str(Kaprekar)
-    while len(resultado_operação) < 4:
-        resultado_operação = '0' + resultado_operação
+    resultado_operação = str(Kaprekar).zfill(4)
 
 # Atualização para próxima interação.
     string_numero = resultado_operação
@@ -120,9 +89,3 @@ else:
     print("\nO processo terminou sem convergir para 6174.")
 
 print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
-
-
-
-
-
-

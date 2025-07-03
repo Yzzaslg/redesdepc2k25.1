@@ -38,10 +38,6 @@ while '_' in progresso and erros < 6:
         print('Digite apenas uma letra por vez...')
         continue # 'continue' faz o programa voltar para o topo do laço e solicitar outra letra.
 
-    if not letra.isalpha(): # Verificação com .isalpha() para saber se o caractere que foi digitado é algo do alfabeto.
-        print('Digite apenas letras (sem números ou símbolos).')
-        continue
-
     if letra in letras_usadas: # Verificando se a letra foi repetida.
         print('Você já utilizou essa letra, tente outra...')
         continue
@@ -72,16 +68,3 @@ else:
     print(f'VItÓRIA: Você descobriu a palavra:{palavra_chave}')
 
 print('\n--- Fim do jogo, obrigado pelo teste!"-" ---')
-
-
-
-
-
-
-
-
-
-
-
-
-
