@@ -16,7 +16,7 @@ except ValueError:
 except Exception as e:
     sys.exit(f'ERRO: {e}')
 
-# Contar quantos dígitos tem o número o dado
+# Contar quantos dígitos tem o número dado
 else:
     num_temp = num
     pot_qt_digitos = 0
