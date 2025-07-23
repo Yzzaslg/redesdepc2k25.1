@@ -36,12 +36,10 @@ lstCabecalho.append('Saldo de Gols')
 # Classificando os times
 lstTimes.sort(key=lambda time: (time[4], time[1], time[7], time[5]), reverse=True)
 
-'''
 # Imprimindo o conteúdo da lista
 print(lstCabecalho)
 for time in lstTimes:
    print(time)
-'''
 
 # Salvando a lista em um arquivo
 arqEscrita = open(f'{strDir}\\times_classificacao.csv', 'w', encoding='utf-8')

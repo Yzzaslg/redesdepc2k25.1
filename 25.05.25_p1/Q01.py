@@ -28,5 +28,3 @@ except Exception as excecao:
 # Solicitando a soma:
 else:
     print(f'A Soma dos digitos de {mil} + {cem} + {dez} + {numero} é: {soma}')
-
-    
