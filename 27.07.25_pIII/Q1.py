@@ -17,7 +17,7 @@ except Exception as e:
     sys.exit(f'ERR0: {e}')
 
 # Criar a lista principal
-list_origem = [[random.randint(0, 19) for _ in range(n_elementos)] for _ in range(n_sublistas)] # random.randint vai gerar os elementos dado em () de forma aleatória, primero for in range() vai gerar uma sublista que a quantidade de elementos e o segundo for in range() repete essa sublista várias vezes.
+list_origem = [[random.randint(0, 19) for _ in range(n_elementos)] for _ in range(n_sublistas)] # random.randint vai gerar os elementos dado em () de forma aleatória, primero for in range() vai gerar uma sublista com a quantidade de elementos e o segundo for in range() repete essa sublista várias vezes.
 
 
 # Criar a lista transposta
