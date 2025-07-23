@@ -21,7 +21,7 @@ list_origem = [[random.randint(0, 19) for _ in range(n_elementos)] for _ in rang
 
 
 # Criar a lista transposta
-list_inversa = [list(verticais) for verticais in zip(*list_origem)] # zip agrupa os elementos de mesma posição de cada linha e o * abre uma lista e retornar cada elemento seu de forma separada.
+list_inversa = [list(verticais) for verticais in zip(*list_origem)] # zip agrupa os elementos de mesma posição, formando novas colunas e o * abre uma lista e retornar cada elemento seu de forma separada.
 
 # Exibir as listas
 print('lista origem: ')
