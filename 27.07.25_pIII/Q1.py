@@ -25,11 +25,9 @@ list_inversa = [[list_origem[l][c] for l in range(n_linhas)] for c in range(n_co
 
 # Exibir as listas
 print('lista origem: ')
-for horizontal in list_origem:
-    print(horizontal)
+[print(linha) for linha in list_origem]
 
 print('\nlista transposta: ')
-for horizontal in list_inversa:
-    print(horizontal)
+[print(linha) for linha in list_inversa]
 
 print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
