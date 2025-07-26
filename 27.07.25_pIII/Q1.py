@@ -10,7 +10,6 @@ try:
     n_colunas = int(input('Informe um valor inteiro ( maior que 0 ) para a quantidade de colunas em cada sub-lista: '))
     if n_linhas <= 0 or n_colunas <= 0:
         sys.exit('Informe um valor inteiro válido.')
-
 except ValueError:
     sys.exit('ERR0: Informe apenas valores inteiros.')
 except Exception as e:

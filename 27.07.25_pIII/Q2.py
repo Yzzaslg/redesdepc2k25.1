@@ -102,7 +102,6 @@ print('\nProbabilidades: ')
 print(f"\nAcertar a SENA: 1 em {combi_n_6}") # só há uma chance de acertar a SENA.
 print(f"Acertar a QUINA: 1 em {combi_n_5 // 6}") # 6 subconjuntos de 5 em cada combinação de 6.
 print(f"Acertar a QUADRA: 1 em {combi_n_4 // 15}") # 15 subconjuntos de 4 em cada combinação de 6.
-
 print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
 
 
