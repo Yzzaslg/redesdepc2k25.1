@@ -8,29 +8,50 @@ v. O programa deverá salvar a lista do item (iv) no mesmo formato do arquivo PR
 '''
 import os, sys
 
-# Obtendo o diretório onde o programa está salvo
-strDir = os.path.dirname(__file__)
+# Obtendo o diretório onde o programa está salvo.
+diretorio = os.path.dirname(__file__)
 
-# Abrindo e lendo o arquivo gabarito.txt
+# Ler arquivos.
 try:
-   arqLeitura = open(f'{strDir}\\gabarito.txt', 'r', encoding='utf-8')
+   gabLeitura = open(f'{diretorio}\\gabarito.txt', 'r', encoding='utf-8')
+   provasLeitura = open(f'{diretorio}\\provas.csv', 'r', encoding='utf-8')
+   arqescrita = open(f'{diretorio}\\RESULTADOS.CSV','w', encoding='utf-8')
 except FileNotFoundError:
    sys.exit('\nERRO: Arquivo não encontrado...')
 except Exception as erro:
    sys.exit(f'\nERRO: {erro}')
+
+# criação das listas gabarito e provas.
 else:
-   lista_gabarito = []
+   lista_gabarito = list(gabLeitura.readline().split())
+   lista_provas = list()
 
-print(lista_gabarito)
+for strProva in provasLeitura: # lê linha por linha automaticamente
+    strProva = strProva.strip()
+    if not strProva: # ignora linhas vazias
+        continue
+    lstAux = [linha for linha in strProva.split(';')] # separa os dados da linha.
+    lista_provas.append(lstAux)
 
-# Abrindo e lendo o arquivo provas.csv
-try:
-   arqLeitura = open(f'{strDir}\\provas.csv', 'r', encoding='utf-8')
-except FileNotFoundError:
-   sys.exit('\nERRO: Arquivo não encontrado...')
-except Exception as erro:
-   sys.exit(f'\nERRO: {erro}')
-else:
-   lista_provas = []
+provasLeitura.close()
+gabLeitura.close()
 
-print(lista_provas)
+# Inserindo notas
+for prova in lista_provas:
+   acertos = 0
+   for nota in range(1, len(prova)): # começa de [1] pois [0] são alunos.
+      if prova[nota] == lista_gabarito[nota - 1]:
+         acertos += 1
+   prova.append(acertos)
+
+lista_provas.sort(key = lambda prova: prova[11], reverse = True)
+
+# Escrever no arquivo
+for prova in lista_provas:
+   linha = ';'.join(str(i) for i in prova)
+   arqescrita.write(f'{linha}\n')
+arqescrita.close()
+
+# Imprimir prova
+for prova in lista_provas:
+   print(prova)
