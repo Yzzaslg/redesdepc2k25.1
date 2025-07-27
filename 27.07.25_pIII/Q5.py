@@ -17,9 +17,9 @@ try:
    provasLeitura = open(f'{diretorio}\\provas.csv', 'r', encoding='utf-8')
    arqescrita = open(f'{diretorio}\\RESULTADOS.CSV','w', encoding='utf-8')
 except FileNotFoundError:
-   sys.exit('\nERRO: Arquivo não encontrado...')
+   sys.exit('\nERR0: Arquivo não encontrado...')
 except Exception as erro:
-   sys.exit(f'\nERRO: {erro}')
+   sys.exit(f'\nERR0: {erro}')
 
 # criação das listas gabarito e provas.
 else:
