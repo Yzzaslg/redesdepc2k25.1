@@ -55,3 +55,5 @@ arqescrita.close()
 # Imprimir prova
 for prova in lista_provas:
    print(prova)
+
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')
