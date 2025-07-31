@@ -18,8 +18,10 @@ os dados de cada sub-lista separados por ponto e vírgula (;).'''
 
 import sys, os
 
+# Obtendo o diretório onde o programa está salvo.
 diretorio = os.path.dirname(__file__)
 
+# Ler arquivos.
 try:
     arqLeitura = open(f'{diretorio}\\ALUNOS_IFRN.CSV', 'r', encoding='utf-8')
     escritaCampus = open(f'{diretorio}\\ALUNOS_IFRN_CAMPUS.csv', 'w', encoding='utf-8')
