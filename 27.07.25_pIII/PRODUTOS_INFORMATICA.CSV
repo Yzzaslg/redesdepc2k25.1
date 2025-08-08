@@ -1,0 +1,43 @@
+Nome;Categoria;Empresa A;Empresa B;Empresa C
+Computador;Permanente;2500.00;2750.00;2900.00
+Impressora;Permanente;800.00;1000.00;950.00
+Monitor;Permanente;1600.00;1700.00;1500.00
+Teclado;Consumo;180.00;150.00;160.00
+Mouse;Permanente;130.00;150.00;120.00
+Notebook;Permanente;5000.00;4400.00;4700.00
+Webcam;Consumo;270.00;230.00;250.00
+Fone de ouvido;Consumo;180.00;170.00;200.00
+Caixa de som;Consumo;210.00;220.00;200.00
+HD Externo;Permanente;370.00;340.00;350.00
+SSD;Consumo;330.00;310.00;290.00
+Teclado mecânico;Permanente;350.00;370.00;340.00
+Placa de vídeo;Permanente;1900.00;1750.00;2100.00
+Roteador;Consumo;230.00;240.00;210.00
+Microfone;Permanente;280.00;240.00;260.00
+Fonte de alimentação;Permanente;320.00;300.00;350.00
+Mochila para notebook;Consumo;160.00;140.00;120.00
+Cabo HDMI;Permanente;35.00;40.00;30.00
+Adaptador USB;Consumo;50.00;45.00;55.00
+Router Wireless;Permanente;290.00;250.00;270.00
+Scanner;Permanente;650.00;620.00;700.00
+Projetor;Consumo;1700.00;1500.00;1600.00
+Cooler;Permanente;100.00;110.00;120.00
+Pen Drive;Consumo;50.00;45.00;40.00
+Placa mãe;Permanente;780.00;730.00;800.00
+Processador;Permanente;1600.00;1700.00;1450.00
+Memória RAM;Permanente;380.00;350.00;400.00
+Fonte de notebook;Consumo;160.00;150.00;170.00
+Mouse gamer;Permanente;250.00;220.00;230.00
+Cadeira gamer;Consumo;740.00;750.00;720.00
+Sistema de áudio;Consumo;500.00;520.00;480.00
+Impressora 3D;Permanente;2500.00;2700.00;2400.00
+Placa de captura;Permanente;600.00;650.00;590.00
+Cartucho de tinta;Consumo;60.00;50.00;55.00
+Carregador portátil;Consumo;120.00;100.00;110.00
+Suporte para notebook;Consumo;100.00;90.00;110.00
+Chave de segurança;Consumo;45.00;40.00;50.00
+Cabo de rede;Permanente;25.00;22.00;20.00
+Extensão elétrica;Consumo;40.00;35.00;30.00
+Bateria para notebook;Permanente;250.00;270.00;240.00
+Fonte de alimentação gamer;Permanente;500.00;520.00;480.00
+Headset;Permanente;330.00;310.00;350.00
