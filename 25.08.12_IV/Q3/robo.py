@@ -39,15 +39,15 @@ if comandos.strip() == '': # caso o usuário digite apenas espaço e der enter, 
     sys.exit('Nenhum comando foi digitado, o robô não vai se mover...')
 
 # Registrar a movimentação do robô.
-posicao_i, movimentos_validos, movimentos_invalidos, movimentos, posicao_f = movimenta((x, y), comandos)
+posicao_inicial, movimentos_validos, movimentos_invalidos, movimentos, posicao_final = movimenta((x, y), comandos)
 
 # Determinar o quadrante inicial e final.
-posicao_inicial, quadrante_inicial = quadrantes(posicao_i)
-posicao_final, quadrante_final = quadrantes(posicao_f)
+_, quadrante_inicial = quadrantes(posicao_inicial) # _, ignora o primeiro valor retornado pela função quandrantes que é (x,y).
+_, quadrante_final = quadrantes(posicao_final)
 
 # Resultados.
 print('--- Resultados: ---')
-print(f'\nPosição inicial do robô: {posicao_i} ')
+print(f'\nPosição inicial do robô: {posicao_inicial} ')
 print(f'Posição final do robô: {posicao_final}')
 print(f'Quantidade de movimentos efetuados: {movimentos}')
 print(f'Movimentos efetuados: {movimentos_validos}')
