@@ -20,31 +20,64 @@ terceira coluna e a média de venda (com 3 casas decimais) na quarta coluna, lem
 
 g. Lembre-se de tratar as devidas exceções no programa (conversões de valores, requisições na WEB, manipulação de arquivos, ...). Elas são obrigatórias'''
 
-import sys, requests, json, Q1_funçoes
+import sys, requests, json
+from Q1_funçoes import listar_moedas, calculo_medias_mensais
 from datetime import datetime
-
-strURLMoedas  = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata'
-strURLMoedas += '/Moedas?$top=100&$format=json'
-
-dicMoedas = requests.get(strURLMoedas).json()
-
-strURLCotacoes  = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/'
-strURLCotacoes += 'CotacaoMoedaPeriodo(moeda=@moeda,dataInicial='
-strURLCotacoes += '@dataInicial,dataFinalCotacao=@dataFinalCotacao)?'
-strURLCotacoes += '@moeda=%27USD%27&@dataInicial=%2701-01-2023%27&'
-strURLCotacoes += '@dataFinalCotacao=%2712-31-2023%27&$format=json'
-
-dicCotacoes = requests.get(strURLCotacoes).json()
 
 ano_atual = datetime.now().year # Definir ano atual
 
-# Solicitar ano desejado pelo usuário
-ano = int(input('Escolha um ano desejado para verificação: '))
-if ano > ano_atual:
-    sys.exit('ERR0:Informe um ano inferior ao atual.')
-else:
-    for moeda in dicMoedas['value']: 
-        print(moeda['simbolo'],'/',moeda['nomeFormatado']) # Listagem das moedas disponíveis.
-# Solicitar uma moeda desejada
-    moeda = input('Escolha a moeda desejada pela sigla (ex: USD, EUR) para verificação: ').strip().upper()
+# Solicitar ano desejado pelo usuário e validar
+try:
+    ano = int(input('Escolha um ano desejado para verificação: '))
+    while ano > ano_atual or ano < 1994:
+        ano = int(input(f'Ano inválido ( o ano deve estar entre 1994 e o ano atual ), digite novamente: '))
+except ValueError:
+    sys.exit('Digite um número inteiro para o ano.')
+except Exception as e:
+    sys.exit(f'ERR0: {e}')
 
+# Api moedas.
+strURLMoedas = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$format=json'
+try:
+    dicMoedas = requests.get(strURLMoedas).json()
+except Exception:
+    sys.exit('ERR0: Não foi possível acessar a lista de moedas.')
+
+
+# Listar moedas disponíveis.
+lstMoedas = listar_moedas(dicMoedas)
+
+# Solicitar uma moeda desejada.
+moeda = input('Escolha a moeda desejada pela sigla (ex: USD, EUR) para verificação: ').upper()
+while not moeda in lstMoedas:
+    moeda = input(f'ERR0: Moeda "{moeda}" inválida, digite novamente: ').upper()
+
+# Api cotações.
+strURLCotacoes  = f'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda=%27{moeda}%27&@dataInicial=%2701-01-{ano}%27&@dataFinalCotacao=%2712-31-{ano}%27&$format=json'
+try:    
+    dicCotacoes = requests.get(strURLCotacoes).json()
+except Exception:
+    sys.exit('ERR0: Não foi possível acessar as cotações.')
+
+# Calcular médias mensais.
+try:
+    resultado = calculo_medias_mensais(dicCotacoes)
+except Exception as e:
+    sys.exit(f'ERR0: {e}')
+
+# Salvar arquivo.json.
+cotacoes_json = f'medias_cotacoes_{moeda}_{ano}.json'
+arquivo_json = open(cotacoes_json, 'w', encoding='utf-8')
+json.dump(resultado, arquivo_json, ensure_ascii=False, indent=4) # json.dump: pega um objeto Python (lista, dicionário, etc.) e grava diretamente em um arquivo.
+arquivo_json.close
+
+# Salvar arquivo.csv.
+cotacoes_csv = f'medias_cotacoes_{moeda}_{ano}.csv'
+arquivo_csv = open(cotacoes_csv, 'w', encoding='utf-8')
+arquivo_csv.write("moeda;mes;mediaCompra;mediaVenda\n")
+for mes, valores in resultado.items():
+    arquivo_csv.write(f"{moeda};{mes};{valores['mediaCompra']:.3f};{valores['mediaVenda']:.3f}\n")
+arquivo_csv.close()
+
+print(f'Arquivos "{cotacoes_json}" e "{cotacoes_csv}" salvos com sucesso!')
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')

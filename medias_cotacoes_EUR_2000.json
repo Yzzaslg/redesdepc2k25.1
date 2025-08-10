@@ -1,0 +1,50 @@
+{
+    "Janeiro": {
+        "mediaCompra": 1.824,
+        "mediaVenda": 1.835
+    },
+    "Fevereiro": {
+        "mediaCompra": 1.742,
+        "mediaVenda": 1.753
+    },
+    "Março": {
+        "mediaCompra": 1.677,
+        "mediaVenda": 1.687
+    },
+    "Abril": {
+        "mediaCompra": 1.668,
+        "mediaVenda": 1.678
+    },
+    "Maio": {
+        "mediaCompra": 1.654,
+        "mediaVenda": 1.664
+    },
+    "Junho": {
+        "mediaCompra": 1.715,
+        "mediaVenda": 1.725
+    },
+    "Julho": {
+        "mediaCompra": 1.685,
+        "mediaVenda": 1.695
+    },
+    "Agosto": {
+        "mediaCompra": 1.631,
+        "mediaVenda": 1.641
+    },
+    "Setembro": {
+        "mediaCompra": 1.598,
+        "mediaVenda": 1.608
+    },
+    "Outubro": {
+        "mediaCompra": 1.6,
+        "mediaVenda": 1.61
+    },
+    "Novembro": {
+        "mediaCompra": 1.662,
+        "mediaVenda": 1.672
+    },
+    "Dezembro": {
+        "mediaCompra": 1.76,
+        "mediaVenda": 1.771
+    }
+}
