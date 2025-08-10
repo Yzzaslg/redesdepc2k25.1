@@ -21,12 +21,12 @@ iii. Tipos de dados incompatíveis para as funções.
 '''
 
 import sys
-from robo_funcoes import quadrante, movimenta
+from robo_funcoes import quadrantes, movimenta
 
 # Solicitar as posições iniciais ao usuário.
 try:
-    x_i = int(input('Dgite um valor para a posição X inicial: '))
-    y_i = int(input('Dgite um valor para a posição Y inicial: '))
+    x = int(input('Dgite um valor para a posição X inicial: '))
+    y = int(input('Dgite um valor para a posição Y inicial: '))
 except ValueError:
     sys.exit('Valor inválido, por favor digite valores inteiros para X e Y...')
 except Exception as e:
@@ -39,15 +39,15 @@ if comandos.strip() == '': # caso o usuário digite apenas espaço e der enter, 
     sys.exit('Nenhum comando foi digitado, o robô não vai se mover...')
 
 # Registrar a movimentação do robô.
-posicao_i, movimentos_validos, movimentos_invalidos, movimentos, posicao = movimenta((x_i, y_i), comandos)
+posicao_i, movimentos_validos, movimentos_invalidos, movimentos, posicao_f = movimenta((x, y), comandos)
 
 # Determinar o quadrante inicial e final.
-posicao_inicial, quadrante_inicial = quadrante(posicao_i)
-posicao_final, quadrante_final = quadrante(posicao)
+posicao_inicial, quadrante_inicial = quadrantes(posicao_i)
+posicao_final, quadrante_final = quadrantes(posicao_f)
 
 # Resultados.
 print('--- Resultados: ---')
-print(f'\nPosição inicial do robô: ({x_i},{y_i}) ')
+print(f'\nPosição inicial do robô: {posicao_i} ')
 print(f'Posição final do robô: {posicao_final}')
 print(f'Quantidade de movimentos efetuados: {movimentos}')
 print(f'Movimentos efetuados: {movimentos_validos}')

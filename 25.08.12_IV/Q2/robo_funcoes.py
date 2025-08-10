@@ -1,21 +1,21 @@
-def quadrante(posicaoXY: tuple) -> tuple:
-    x_i, y_i = posicaoXY
-    if x_i > 0 and y_i > 0:
-        quadrante_i = 'Quadrante I'
-    elif x_i < 0 and y_i > 0:
-        quadrante_i = 'Quadrante II'
-    elif x_i < 0 and y_i < 0:
-        quadrante_i = 'Quadrante III'
-    elif x_i > 0 and y_i < 0:
-        quadrante_i = 'Quadrante IV'
-    elif x_i == 0 and y_i == 0:
-        quadrante_i = 'Origem'
-    elif x_i == 0:
-        quadrante_i = 'No eixo Y'
-    elif y_i == 0:
-        quadrante_i = 'No eixo X'
+def quadrantes(posicaoXY: tuple) -> tuple:
+    x, y = posicaoXY
+    if x > 0 and y > 0:
+        quadrante = 'Quadrante I'
+    elif x < 0 and y > 0:
+        quadrante = 'Quadrante II'
+    elif x < 0 and y < 0:
+        quadrante = 'Quadrante III'
+    elif x > 0 and y < 0:
+        quadrante = 'Quadrante IV'
+    elif x == 0 and y == 0:
+        quadrante = 'Origem'
+    elif x == 0:
+        quadrante = 'No eixo Y'
+    elif y == 0:
+        quadrante = 'No eixo X'
     
-    return quadrante_i, quadrante
+    return ((x,y), quadrante)
 
 def movimenta(posicaoXY: tuple, comandos: str) -> tuple:
     x, y = posicaoXY
