@@ -1,4 +1,4 @@
-import requests, sys
+import sys
 from datetime import datetime
 
 __all__ = ['listar_moedas', 'calculo_medias_mensais']
