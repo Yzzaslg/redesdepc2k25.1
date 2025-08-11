@@ -33,12 +33,14 @@ manipulação de arquivos, ...). Elas são obrigatórias.
 '''
 from Q2_funçoes import dados_cartola, escolher_escalacao_e_quantidades, definir_selecao, salvar_exibir_selecao
 
+# Dados do Cartola FC
 ano, ano_atual, dicCartola = dados_cartola()
 
+# Definir escalação e quantidades de atletas
 escalacao, quantidades_atletas = escolher_escalacao_e_quantidades()
 
-selecao_atletas = definir_selecao(dicCartola, quantidades_atletas)
-
+# Definir seleção de atletas ( time final do Cartola FC com os melores jogadores por posição ).
 selecao_atletas, ordem = definir_selecao(dicCartola, quantidades_atletas)
 
+# Salvar e exibir resultados da seleção.
 salvar_exibir_selecao(selecao_atletas, ano, ordem)
