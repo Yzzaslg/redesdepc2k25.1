@@ -1,6 +1,4 @@
-import os, sys, requests, json
-
-diretorio = os.path.dirname(__file__)
+import sys, requests, json
 
 def dicionario_cartola(ano, ano_atual):
     # Verifição para o acesso ao arquivo Cartola FC.
@@ -16,7 +14,7 @@ def dicionario_cartola(ano, ano_atual):
     else:
     # carregar dicionário do arquivo de acordo com o ano.
         try:
-            with open(f'{diretorio}\\cartola_fc_{ano}.json', 'r', encoding='utf-8') as arquivo:
+            with open(f'cartola_fc_{ano}.json', 'r', encoding='utf-8') as arquivo:
                 dicCartola = json.load(arquivo)
         except FileNotFoundError:
             sys.exit(f"ERR0: Arquivo cartola_fc_{ano}.json não encontrado.")
@@ -108,7 +106,7 @@ def definir_selecao(dicCartola, quantidades_atletas):
 
 def salvar_exibir_selecao(selecao_atletas, ano, ordem):
     #salvar seleção em arquivo JSON.
-    strselecao_json = f'{diretorio}\\cartola_selecao_{ano}.json'
+    strselecao_json = f'cartola_selecao_{ano}.json'
     try:
         with open(strselecao_json, 'w', encoding='utf-8') as arquivo_json:
             json.dump(selecao_atletas, arquivo_json, ensure_ascii=False, indent=4)
