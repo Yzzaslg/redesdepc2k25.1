@@ -1,0 +1,134 @@
+{
+    "82453": {
+        "id": 82453,
+        "nome": "Tadeu Antônio Ferreira",
+        "apelido": "Tadeu",
+        "foto": "https://s.glbimg.com/es/sde/f/2022/03/10/f9b7377addfcfa29bfa11ee96aecbdc5_220x220.png",
+        "clube": "Goiás",
+        "escudo": "https://s.sde.globo.com/media/organizations/2021/03/01/goias-65.png",
+        "posicao_id": 1,
+        "posicao_nome": "Goleiro",
+        "pontuacao": 149.85
+    },
+    "97653": {
+        "id": 97653,
+        "nome": "Murilo Cerqueira Paim",
+        "apelido": "Murilo",
+        "foto": "https://s.sde.globo.com/media/person_role/2022/02/21/934e2aaafb55c35f6f83b91333b4f5b8_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 176.7
+    },
+    "71684": {
+        "id": 71684,
+        "nome": "Gustavo Raúl Gómez Portillo",
+        "apelido": "Gustavo Gómez",
+        "foto": "https://s.sde.globo.com/media/person_role/2022/02/21/f210b8623194d0722dd0d76585950fb1_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 176.4
+    },
+    "79113": {
+        "id": 79113,
+        "nome": "Víctor Leandro Cuesta",
+        "apelido": "Víctor Cuesta",
+        "foto": "https://s.glbimg.com/es/sde/f/2022/04/13/4f3258f391a28a24859ea19abee67739_220x220.png",
+        "clube": "Botafogo",
+        "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-65.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 153.41
+    },
+    "87999": {
+        "id": 87999,
+        "nome": "Gustavo Henrique Furtado Scarpa",
+        "apelido": "Gustavo Scarpa",
+        "foto": "https://s.sde.globo.com/media/person_role/2022/02/21/7f4f870f8251e4f95ab6d372a22919c1_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 213.84
+    },
+    "82766": {
+        "id": 82766,
+        "nome": "Wellington Soares da Silva",
+        "apelido": "Wellington Rato",
+        "foto": "https://s.glbimg.com/es/sde/f/2022/03/03/f1c021275405991e817f4277af535a6a_220x220.png",
+        "clube": "Atlético-GO",
+        "escudo": "https://s.sde.globo.com/media/organizations/2020/07/02/atletico-go-2020-65.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 174.6
+    },
+    "102878": {
+        "id": 102878,
+        "nome": "Miguel David Terans Pérez",
+        "apelido": "Terans",
+        "foto": "https://s.sde.globo.com/media/person_role/2021/06/22/9afbb795a2e1b8ea2d0c84725bf26e2b_220x220.png",
+        "clube": "Athlético-PR",
+        "escudo": "https://s.sde.globo.com/media/organizations/2019/09/09/Athletico-PR-65x65.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 163.68
+    },
+    "82455": {
+        "id": 82455,
+        "nome": "José Rafael Vivian",
+        "apelido": "Zé Rafael",
+        "foto": "https://s.sde.globo.com/media/person_role/2022/02/21/a9bb4a6cb2ff8e2f533bf41f37dd93dc_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 156.85999999999999
+    },
+    "99815": {
+        "id": 99815,
+        "nome": "Jhon Adolfo Arias Andrade",
+        "apelido": "Arias",
+        "foto": "https://s.sde.globo.com/media/person_role/2022/04/20/d97a4c4cc239d983ba72d755e77a671d_220x220.png",
+        "clube": "Fluminense",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 150.4
+    },
+    "79631": {
+        "id": 79631,
+        "nome": "Germán Ezequiel Cano",
+        "apelido": "Cano",
+        "foto": "https://s.sde.globo.com/media/person_role/2022/04/20/5bb8f223990a3b79975f90d376fb341a_220x220.png",
+        "clube": "Fluminense",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+        "posicao_id": 5,
+        "posicao_nome": "Atacante",
+        "pontuacao": 290.82
+    },
+    "98225": {
+        "id": 98225,
+        "nome": "Pedro Raul Garay da Silva",
+        "apelido": "Pedro Raul",
+        "foto": "https://storage.googleapis.com/bkt-gglobo-sde-hdg-prd-sdeadmin_prod/media/person_role/2022/03/10/5215be2746c5556d28458274ecbe4b16_220x220.png",
+        "clube": "Goiás",
+        "escudo": "https://s.sde.globo.com/media/organizations/2021/03/01/goias-65.png",
+        "posicao_id": 5,
+        "posicao_nome": "Atacante",
+        "pontuacao": 213.51
+    },
+    "110506": {
+        "id": 110506,
+        "nome": "Abel Fernando Moreira Ferreira",
+        "apelido": "Abel Ferreira",
+        "foto": "https://s.sde.globo.com/media/person_role/2021/04/27/574e87d52be9d06fd03fa69fefb60255_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 6,
+        "posicao_nome": "Técnico",
+        "pontuacao": 216
+    }
+}

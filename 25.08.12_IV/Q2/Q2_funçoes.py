@@ -1,20 +1,9 @@
-import sys, requests, json
-from datetime import datetime
+import os, sys, requests, json
 
-def dados_cartola():
-    ano_atual = datetime.now().year
-    while True:
-        try:
-            ano = int(input(f"Informe o ano desejado (de 2021 até {ano_atual}): "))
-            if 2021 <= ano <= ano_atual:
-                break
-            else:
-                print(f"ERR0: O ano informado é inválido, informe entre 2021 e {ano_atual}.")
-        except ValueError:
-            print('Digite um número inteiro para o ano.')
-        except Exception as e:
-            print(f'ERR0: {e}')
+diretorio = os.path.dirname(__file__)
 
+def dicionario_cartola(ano, ano_atual):
+    # Verifição para o acesso ao arquivo Cartola FC.
     if ano == ano_atual:
     # usar dados da api
         print('Requisitando dados da API para o ano atual...')
@@ -27,19 +16,16 @@ def dados_cartola():
     else:
     # carregar dicionário do arquivo de acordo com o ano.
         try:
-            with open(f'cartola_{ano}.json', 'r', encoding='utf-8') as arquivo:
+            with open(f'{diretorio}\\cartola_fc_{ano}.json', 'r', encoding='utf-8') as arquivo:
                 dicCartola = json.load(arquivo)
         except FileNotFoundError:
-            sys.exit(f"ERR0: Arquivo cartola_{ano}.json não encontrado.")
+            sys.exit(f"ERR0: Arquivo cartola_fc_{ano}.json não encontrado.")
         except json.JSONDecodeError:
             sys.exit("ERR0: Erro ao decodificar o JSON do arquivo.")
 
-    return ano, ano_atual, dicCartola
+    return dicCartola
 
-def escolher_escalacao_e_quantidades():
-    # exibir as escalações disponíveis do cartolaFC.
-    escalacoes = ['3-4-3', '3-5-2', '4-3-3', '4-4-2', '4-5-1', '5-3-2', '5-4-1']
-    
+def escolher_escalacao_e_quantidades(escalacoes, escalacao):
     quantidades_escalacao = {
         '3-4-3': {'goleiro': 1, 'zagueiro': 3, 'lateral': 0, 'meia': 4, 'atacante': 3, 'técnico': 1},
         '3-5-2': {'goleiro': 1, 'zagueiro': 3, 'lateral': 0, 'meia': 5, 'atacante': 2, 'técnico': 1},
@@ -48,22 +34,6 @@ def escolher_escalacao_e_quantidades():
         '4-5-1': {'goleiro': 1, 'zagueiro': 2, 'lateral': 2, 'meia': 5, 'atacante': 1, 'técnico': 1},
         '5-3-2': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 3, 'atacante': 2, 'técnico': 1},
         '5-4-1': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 4, 'atacante': 1, 'técnico': 1},}
-    
-    print('Escolha uma das escalações disponíveis:')
-    for i, esc in enumerate(escalacoes, start=1):
-        print(f'{i} - {esc}')
-    # solicitar a escalação desejada.
-    while True:
-        try:
-            escalacao = int(input('Defina uma escalação ( 1-7 ): '))
-            if 1 <= escalacao <= 7:
-                break
-            else:
-                print(f'ERR0: Escalação inválida. Escolha uma das opções: {escalacoes}')
-        except ValueError:
-            print('ERR0: Por favor, digite um número válido.')
-        except Exception as e:
-            print(f'ERR0: {e}')
     
     escalacao = escalacoes[escalacao - 1]
     quantidades_atletas = quantidades_escalacao[escalacao]
@@ -114,20 +84,20 @@ def definir_selecao(dicCartola, quantidades_atletas):
             atleta_id = atleta.get('atleta_id')
             nome_atleta = atleta.get('nome', ' ')
             apelido_atleta = atleta.get('apelido', ' ')
-            foto_aleta = atleta.get('foto', ' ')
+            foto_atleta = atleta.get('foto', ' ')
             # correção da URL da foto.
-            if '_FORMATO_' in foto_aleta:
-                foto_aleta = foto_aleta.replace('_FORMATO_', '_220x220_').replace('_FORMATO', '_220x220')
+            if 'FORMATO' in foto_atleta:
+                foto_atleta = foto_atleta.replace('FORMATO', '220x220')
             clube_id = atleta.get('clube_id')
-            clube_nome = clubes.get(clube_id, {}).get('nome_fantasia', ' ')
-            escudo = clubes.get(clube_id, {}).get('escudos', {}).get('60x60','')
+            clube_nome = clubes.get(str(clube_id), {}).get('nome_fantasia', ' ')
+            escudo = clubes.get(str(clube_id), {}).get('escudos', {}).get('60x60','')
             pos_nome = posicoes.get(str(posicao_id), {}).get('nome', '')
             pontuacao = atleta['pontuacao']
             selecao_atletas[atleta_id] = {
                 'id': atleta_id,
                 'nome': nome_atleta,
                 'apelido': apelido_atleta,
-                'foto': foto_aleta,
+                'foto': foto_atleta,
                 'clube': clube_nome,
                 'escudo': escudo,
                 'posicao_id': posicao_id,
@@ -138,7 +108,7 @@ def definir_selecao(dicCartola, quantidades_atletas):
 
 def salvar_exibir_selecao(selecao_atletas, ano, ordem):
     #salvar seleção em arquivo JSON.
-    strselecao_json = f'cartola_selecao_{ano}.json'
+    strselecao_json = f'{diretorio}\\cartola_selecao_{ano}.json'
     try:
         with open(strselecao_json, 'w', encoding='utf-8') as arquivo_json:
             json.dump(selecao_atletas, arquivo_json, ensure_ascii=False, indent=4)

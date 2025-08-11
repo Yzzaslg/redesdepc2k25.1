@@ -1,0 +1,123 @@
+{
+    "98034": {
+        "id": 98034,
+        "nome": "Ma�lson Ten�rio dos Santos",
+        "apelido": "Ma�lson",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/04/27/978af8903185f1406809c274d6c681f5_220x220.png",
+        "clube": "Sport",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2015/07/21/sport65.png",
+        "posicao_id": 1,
+        "posicao_nome": "Goleiro",
+        "pontuacao": 170.34
+    },
+    "95794": {
+        "id": 95794,
+        "nome": "Nathanael Ananias da Silva",
+        "apelido": "Nathan Silva",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/07/09/f485b236f55b942d9ffa6588b0d47e8f_220x220.png",
+        "clube": "Atl�tico-MG",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2017/11/23/Atletico-Mineiro-escudo65px.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 131.67000000000002
+    },
+    "104250": {
+        "id": 104250,
+        "nome": "Jo�o Victor da Silva Marcelino",
+        "apelido": "Jo�o Victor",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/08/06/2ad4f10146673233d9d0dcb117cd81b9_220x220.png",
+        "clube": "Corinthians",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2019/09/30/Corinthians_65.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 129.15
+    },
+    "95638": {
+        "id": 95638,
+        "nome": "Marcelo da Concei��o Benevenuto Malaquias",
+        "apelido": "Marcelo Benevenuto",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/04/26/f131f07530304a42ed2d813ebd77cd94_220x220.png",
+        "clube": "Fortaleza",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2021/09/19/65_0000_Fortaleza-2021.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 113.56
+    },
+    "94509": {
+        "id": 94509,
+        "nome": "Raphael Cavalcante Veiga",
+        "apelido": "Raphael Veiga",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/04/30/c4c1b91cbd4ff74465329b542ccd0c6d_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 185.70000000000002
+    },
+    "103099": {
+        "id": 103099,
+        "nome": "�derson Jos� dos Santos Louren�o da Silva",
+        "apelido": "�derson",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/05/05/16c28b7f820021c231cfb80d673b50f4_220x220.png",
+        "clube": "Fortaleza",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2021/09/19/65_0000_Fortaleza-2021.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 167.64000000000001
+    },
+    "80196": {
+        "id": 80196,
+        "nome": "Glaybson Yago Souza Lisboa",
+        "apelido": "Yago Pikachu",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/05/05/9a4375bdf79838ec083ac6bd13e2be84_220x220.png",
+        "clube": "Fortaleza",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2021/09/19/65_0000_Fortaleza-2021.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 162.35999999999999
+    },
+    "63289": {
+        "id": 63289,
+        "nome": "Eden�lson Andrade Dos Santos",
+        "apelido": "Eden�lson",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/05/02/8daa1326a66c19d8a48d6375d87a9515_220x220.png",
+        "clube": "Internacional",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2016/05/03/inter65.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 151.79999999999998
+    },
+    "87999": {
+        "id": 87999,
+        "nome": "Gustavo Henrique Furtado Scarpa",
+        "apelido": "Gustavo Scarpa",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/04/30/e594285e6781941b0f08b58d66d6669e_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 150.29999999999998
+    },
+    "39148": {
+        "id": 39148,
+        "nome": "Givanildo Vieira de Souza",
+        "apelido": "Hulk",
+        "foto": "https://s.glbimg.com/es/sde/f/2021/04/23/d9ed7fa34aa12e4ce8768c9c2a2b4560_220x220.png",
+        "clube": "Atl�tico-MG",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2017/11/23/Atletico-Mineiro-escudo65px.png",
+        "posicao_id": 5,
+        "posicao_nome": "Atacante",
+        "pontuacao": 245.19
+    },
+    "95799": {
+        "id": 95799,
+        "nome": "Artur Victor Guimar�es",
+        "apelido": "Artur",
+        "foto": "https://s.glbimg.com/es/sde/f/2020/07/28/e1784a425e398f05dd3d8f178a3ddaf6_220x220.png",
+        "clube": "Bragantino",
+        "escudo": "https://s.glbimg.com/es/sde/f/organizacoes/2020/01/01/65.png",
+        "posicao_id": 5,
+        "posicao_nome": "Atacante",
+        "pontuacao": 181.71
+    }
+}

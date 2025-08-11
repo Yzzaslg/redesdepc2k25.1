@@ -31,16 +31,51 @@ pontuação (média x quantidade de partidas) do atleta;
 i. Lembre-se de tratar as devidas exceções no programa (conversões de valores, requisições na WEB, 
 manipulação de arquivos, ...). Elas são obrigatórias.
 '''
-from Q2_funçoes import dados_cartola, escolher_escalacao_e_quantidades, definir_selecao, salvar_exibir_selecao
+from datetime import datetime
+from Q2_funçoes import dicionario_cartola, escolher_escalacao_e_quantidades, definir_selecao, salvar_exibir_selecao
 
-# Dados do Cartola FC
-ano, ano_atual, dicCartola = dados_cartola()
+# Solicitar ano ao usuário.
+ano_atual = datetime.now().year
+
+while True:
+    try:
+        ano = int(input(f"Informe o ano desejado (de 2021 até {ano_atual}): "))
+        if 2021 <= ano <= ano_atual:
+            break
+        else:
+            print(f"ERR0: O ano informado é inválido, informe entre 2021 e {ano_atual}.")
+    except ValueError:
+        print('Digite um número inteiro para o ano.')
+    except Exception as e:
+        print(f'ERR0: {e}')
+
+dicCartola = dicionario_cartola(ano, ano_atual)
 
 # Definir escalação e quantidades de atletas
-escalacao, quantidades_atletas = escolher_escalacao_e_quantidades()
+escalacoes = ['3-4-3', '3-5-2', '4-3-3', '4-4-2', '4-5-1', '5-3-2', '5-4-1'] # exibir as escalações disponíveis do cartolaFC.
+print('Escolha uma das escalações disponíveis:')
+for i, esc in enumerate(escalacoes, start=1):
+    print(f'{i} - {esc}')
+
+# solicitar a escalação desejada.
+while True:
+    try:
+        escalacao = int(input('Defina uma escalação ( 1-7 ): '))
+        if 1 <= escalacao <= 7:
+            break
+        else:
+            print(f'ERR0: Escalação inválida. Escolha uma das opções: {escalacoes}')
+    except ValueError:
+        print('ERR0: Por favor, digite um número válido.')
+    except Exception as e:
+        print(f'ERR0: {e}')
+
+escalacao, quantidades_atletas = escolher_escalacao_e_quantidades(escalacoes, escalacao)
 
 # Definir seleção de atletas ( time final do Cartola FC com os melores jogadores por posição ).
 selecao_atletas, ordem = definir_selecao(dicCartola, quantidades_atletas)
 
 # Salvar e exibir resultados da seleção.
 salvar_exibir_selecao(selecao_atletas, ano, ordem)
+
+print('\n--- Fim do programa, obrigado pelo teste!"-" ---')

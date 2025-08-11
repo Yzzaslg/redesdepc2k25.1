@@ -1,0 +1,134 @@
+{
+    "81881": {
+        "id": 81881,
+        "nome": "João Ricardo Riedi",
+        "apelido": "João Ricardo",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/02/28/photo_220x220_yXqoxi8.png",
+        "clube": "Fortaleza",
+        "escudo": "https://s.sde.globo.com/media/organizations/2021/09/19/65_0000_Fortaleza-2021.png",
+        "posicao_id": 1,
+        "posicao_nome": "Goleiro",
+        "pontuacao": 175.35
+    },
+    "104994": {
+        "id": 104994,
+        "nome": "Wagner Leonardo Calvelo de Souza",
+        "apelido": "Wagner Leonardo",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/04/12/photo_220x220_kfLtGgD.png",
+        "clube": "Vitória",
+        "escudo": "https://s.sde.globo.com/media/organizations/2024/04/09/escudo-vitoria-65x65-69284.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 132.29999999999998
+    },
+    "98280": {
+        "id": 98280,
+        "nome": "Bartolomeu Jacinto Quissanga",
+        "apelido": "Bastos",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/04/20/photo_220x220_sq29S9f.png",
+        "clube": "Botafogo",
+        "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-65.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 132.06
+    },
+    "99274": {
+        "id": 99274,
+        "nome": "Alexander Nahuel Barboza Ullúa",
+        "apelido": "Alexander Barboza",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/04/20/photo_220x220_9Ge6HYf.png",
+        "clube": "Botafogo",
+        "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-65.png",
+        "posicao_id": 3,
+        "posicao_nome": "Zagueiro",
+        "pontuacao": 113.75
+    },
+    "117632": {
+        "id": 117632,
+        "nome": "Rodrigo Garro",
+        "apelido": "Garro",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/02/27/photo_220x220_5Gp0vVv.png",
+        "clube": "Corinthians",
+        "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians-2024-65_IYhgZ1u.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 267.05
+    },
+    "70164": {
+        "id": 70164,
+        "nome": "Lucas Rodrigues Moura da Silva",
+        "apelido": "Lucas Moura",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/03/01/photo_220x220_3fFiGsF.png",
+        "clube": "São Paulo",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/sao_paulo_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 198.24
+    },
+    "94509": {
+        "id": 94509,
+        "nome": "Raphael Cavalcante Veiga",
+        "apelido": "Raphael Veiga",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/02/27/photo_220x220_XOXiO3C.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 195.84
+    },
+    "90703": {
+        "id": 90703,
+        "nome": "Matheus Martins Fogaça de Paulo",
+        "apelido": "Matheuzinho",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/04/12/photo_220x220_oRcCuAx.png",
+        "clube": "Vitória",
+        "escudo": "https://s.sde.globo.com/media/organizations/2024/04/09/escudo-vitoria-65x65-69284.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 183.68
+    },
+    "96610": {
+        "id": 96610,
+        "nome": "Matheus Fellipe Costa Pereira",
+        "apelido": "Matheus Pereira",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/03/02/photo_220x220_tZZNLQo.png",
+        "clube": "Cruzeiro",
+        "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/65_cruzeiro-2021.png",
+        "posicao_id": 4,
+        "posicao_nome": "Meia",
+        "pontuacao": 176.96
+    },
+    "128915": {
+        "id": 128915,
+        "nome": "Estêvão Willian Almeida de Oliveira Gonçalves",
+        "apelido": "Estêvão",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/02/27/photo_220x220_ndyx6H0.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 5,
+        "posicao_nome": "Atacante",
+        "pontuacao": 227.64999999999998
+    },
+    "101715": {
+        "id": 101715,
+        "nome": "Alerrandro Barra Mansa Realino de Souza",
+        "apelido": "Alerrandro",
+        "foto": "https://s.sde.globo.com/media/person_role/2024/04/12/photo_220x220_v6x7rRS.png",
+        "clube": "Vitória",
+        "escudo": "https://s.sde.globo.com/media/organizations/2024/04/09/escudo-vitoria-65x65-69284.png",
+        "posicao_id": 5,
+        "posicao_nome": "Atacante",
+        "pontuacao": 220.44
+    },
+    "110506": {
+        "id": 110506,
+        "nome": "Abel Fernando Moreira Ferreira",
+        "apelido": "Abel Ferreira",
+        "foto": "https://s.sde.globo.com/media/person_role/2021/04/27/574e87d52be9d06fd03fa69fefb60255_220x220.png",
+        "clube": "Palmeiras",
+        "escudo": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+        "posicao_id": 6,
+        "posicao_nome": "Técnico",
+        "pontuacao": 224.28000000000003
+    }
+}
