@@ -41,13 +41,13 @@ def escolher_escalacao_e_quantidades():
     escalacoes = ['3-4-3', '3-5-2', '4-3-3', '4-4-2', '4-5-1', '5-3-2', '5-4-1']
     
     quantidades_escalacao = {
-        '3-4-3': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 4, 'atacante': 3, 'tecnico': 1},
-        '3-5-2': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 5, 'atacante': 2, 'tecnico': 1},
-        '4-3-3': {'goleiro': 1, 'zagueiro': 4, 'lateral': 2, 'meia': 3, 'atacante': 3, 'tecnico': 1},
-        '4-4-2': {'goleiro': 1, 'zagueiro': 4, 'lateral': 2, 'meia': 4, 'atacante': 2, 'tecnico': 1},
-        '4-5-1': {'goleiro': 1, 'zagueiro': 4, 'lateral': 2, 'meia': 5, 'atacante': 1, 'tecnico': 1},
-        '5-3-2': {'goleiro': 1, 'zagueiro': 5, 'lateral': 2, 'meia': 3, 'atacante': 2, 'tecnico': 1},
-        '5-4-1': {'goleiro': 1, 'zagueiro': 5, 'lateral': 2, 'meia': 4, 'atacante': 1, 'tecnico': 1},}
+        '3-4-3': {'goleiro': 1, 'zagueiro': 3, 'lateral': 0, 'meia': 4, 'atacante': 3, 'técnico': 1},
+        '3-5-2': {'goleiro': 1, 'zagueiro': 3, 'lateral': 0, 'meia': 5, 'atacante': 2, 'técnico': 1},
+        '4-3-3': {'goleiro': 1, 'zagueiro': 2, 'lateral': 2, 'meia': 3, 'atacante': 3, 'técnico': 1},
+        '4-4-2': {'goleiro': 1, 'zagueiro': 2, 'lateral': 2, 'meia': 4, 'atacante': 2, 'técnico': 1},
+        '4-5-1': {'goleiro': 1, 'zagueiro': 2, 'lateral': 2, 'meia': 5, 'atacante': 1, 'técnico': 1},
+        '5-3-2': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 3, 'atacante': 2, 'técnico': 1},
+        '5-4-1': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 4, 'atacante': 1, 'técnico': 1},}
     
     print('Escolha uma das escalações disponíveis:')
     for i, esc in enumerate(escalacoes, start=1):
@@ -99,7 +99,7 @@ def definir_selecao(dicCartola, quantidades_atletas):
         nome_posicao_id[posicao_info['nome'].lower()] = int(posicao_id)
 
     # Ordenar por posição.
-    ordem = ['goleiro', 'zagueiro', 'lateral', 'meia', 'atacante', 'tecnico']
+    ordem = ['goleiro', 'zagueiro', 'lateral', 'meia', 'atacante', 'técnico']
     for nome_posicao in ordem:
         posicao_id = nome_posicao_id.get(nome_posicao)
         if not posicao_id:
