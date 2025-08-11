@@ -31,9 +31,7 @@ pontuação (média x quantidade de partidas) do atleta;
 i. Lembre-se de tratar as devidas exceções no programa (conversões de valores, requisições na WEB, 
 manipulação de arquivos, ...). Elas são obrigatórias.
 '''
-import sys, requests, json
 from Q2_funçoes import dados_cartola, escolher_escalacao_e_quantidades, definir_selecao, salvar_exibir_selecao
-from datetime import datetime
 
 ano, ano_atual, dicCartola = dados_cartola()
 
