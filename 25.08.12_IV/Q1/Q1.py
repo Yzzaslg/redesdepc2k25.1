@@ -20,7 +20,7 @@ terceira coluna e a média de venda (com 3 casas decimais) na quarta coluna, lem
 
 g. Lembre-se de tratar as devidas exceções no programa (conversões de valores, requisições na WEB, manipulação de arquivos, ...). Elas são obrigatórias'''
 
-import sys, requests, json
+import os, sys, requests, json
 from Q1_funçoes import listar_moedas, calculo_medias_mensais
 from datetime import datetime
 
@@ -65,14 +65,17 @@ try:
 except Exception as e:
     sys.exit(f'ERR0: {e}')
 
+# Salvar arquivos.
+strDir = os.path.dirname(__file__)
+
 # Salvar arquivo.json.
-cotacoes_json = f'medias_cotacoes_{moeda}_{ano}.json'
+cotacoes_json = f'{strDir}\\medias_cotacoes_{moeda}_{ano}.json'
 arquivo_json = open(cotacoes_json, 'w', encoding='utf-8')
 json.dump(resultado, arquivo_json, ensure_ascii=False, indent=4) # json.dump: pega um objeto Python (lista, dicionário, etc.) e grava diretamente em um arquivo.
 arquivo_json.close
 
 # Salvar arquivo.csv.
-cotacoes_csv = f'medias_cotacoes_{moeda}_{ano}.csv'
+cotacoes_csv = f'{strDir}\\medias_cotacoes_{moeda}_{ano}.csv'
 arquivo_csv = open(cotacoes_csv, 'w', encoding='utf-8')
 arquivo_csv.write("moeda;mes;mediaCompra;mediaVenda\n")
 for mes, valores in resultado.items():
