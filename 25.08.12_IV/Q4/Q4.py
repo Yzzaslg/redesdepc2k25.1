@@ -31,8 +31,8 @@ while True:
     if opcao == 1:
         print('Buscando letra da música...')
         while True:
-            artista = input('Digite o nome do artista: ')
-            musica = input('Digite o título da música: ')
+            artista = input('Digite o nome do artista: ').strip()
+            musica = input('Digite o título da música: ').strip()
             if not artista or not musica:
                 print('ERR0: Artista e título da música não podem ser vazios.')
                 continue # volta para o inicio do loop onde solicita artista ou música novamente.
