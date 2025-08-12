@@ -14,16 +14,27 @@ def menu_opcoes():
 def buscar_letra(artista, musica):
 # Busca a letra de uma música usando a API lyrics.ovh.
     strURLlyrics = f'https://api.lyrics.ovh/v1/{artista}/{musica}'
-    try:    
-        dicAPIlyrics = requests.get(strURLlyrics, timeout=5).json()
-        if 'lyrics' in dicAPIlyrics:
-            return dicAPIlyrics['lyrics']
-        else:
-            return 'Letra não encontrada.'
+    try:
+        resposta = requests.get(strURLlyrics, timeout=60)
+        resposta.raise_for_status()  # Gera erro se status_code != 200
     except requests.Timeout:
-        print('ERR0: A requisição demorou demais e foi cancelada (timeout).')       
+        print('ERR0: A requisição demorou demais e foi cancelada (timeout).')
+        return None
     except requests.RequestException as e:
-        sys.exit(f'ERR0: Falha na requisição à API: {e}')
+        print(f'ERR0: Falha na requisição à API: {e}')
+        return None
+
+    try:
+        dicAPIlyrics = resposta.json()
+    except ValueError:
+        print(f'ERR0: Resposta não é JSON. Conteúdo recebido:\n{resposta.text[:200]}')
+        return None
+
+    if 'lyrics' in dicAPIlyrics and dicAPIlyrics['lyrics'].strip():
+        return dicAPIlyrics['lyrics']
+    else:
+        print('ERR0: Letra não encontrada para esta música.')
+        return None
 
 def exibir_letra(artista, musica, letra): # Exibir a letra de forma bonita ( formatada ).
     print('\n' + '='*50)
