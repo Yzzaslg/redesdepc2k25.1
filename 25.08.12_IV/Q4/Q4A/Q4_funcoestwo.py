@@ -4,6 +4,8 @@ diretorio = os.path.dirname(__file__)
 
 arquivo_historico = 'historicosteam.json'
 
+historicosteam = f'{diretorio}\\{arquivo_historico}'
+
 def menu_opcoes():
     print('\nBem-vindo ao programa steamgames!')
     print('\n===== MENU PRINCIPAL =====')
@@ -58,13 +60,13 @@ def exibir_detalhes_jogo(info_jogo): # Exibe informações relevantes de um jogo
     print(f"Data de lançamento: {info_jogo.get('release_date', {}).get('date', 'Data não disponível')}")
     print('\n' + '='*50)
 
+
 def atualizar_salvar_historico(historico, arquivo_historico):
-    historicosteam = f'{diretorio}\\{arquivo_historico}'
     # Atualiza o histórico e salva em um arquivo JSON.
     try:
         with open(historicosteam, 'w', encoding='utf-8') as arquivo_historico:
             json.dump(historico, arquivo_historico, ensure_ascii=False, indent=4)
-        print(f'Histórico atualizado e salvo no arquivo: "{arquivo_historico}" com sucesso!')
+        print(f'Histórico atualizado e salvo no arquivo: "{historicosteam}" com sucesso!')
     except Exception as e:
         sys.exit(f'ERR0: {e}')
 
@@ -78,5 +80,5 @@ def carregar_historico(arquivo_historico):
         print(f'ERR0: Arquivo "{arquivo_historico}" não encontrado.')
         return []
     except json.JSONDecodeError:
-        print(f'ERR0: Erro ao decodificar o JSON do arquivo "{arquivo_historico}".')
+        print(f'ERR0: Erro ao decodificar o JSON do arquivo "{historicosteam}".')
         return []
