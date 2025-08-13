@@ -62,8 +62,8 @@ def atualizar_salvar_historico(historico, arquivo_historico):
     historicosteam = f'{diretorio}\\{arquivo_historico}'
     # Atualiza o histórico e salva em um arquivo JSON.
     try:
-        with open(historicosteam, 'w', encoding='utf-8') as arquivo_json:
-            json.dump(historico, arquivo_json, ensure_ascii=False, indent=4)
+        with open(historicosteam, 'w', encoding='utf-8') as arquivo_historico:
+            json.dump(historico, arquivo_historico, ensure_ascii=False, indent=4)
         print(f'Histórico atualizado e salvo no arquivo: "{arquivo_historico}" com sucesso!')
     except Exception as e:
         sys.exit(f'ERR0: {e}')
@@ -71,8 +71,8 @@ def atualizar_salvar_historico(historico, arquivo_historico):
 def carregar_historico(arquivo_historico):
     # Carrega o histórico de um arquivo JSON.
     try:
-        with open(arquivo_historico, 'r', encoding='utf-8') as arquivo_json:
-            historico = json.load(arquivo_json)
+        with open(arquivo_historico, 'r', encoding='utf-8') as arquivo_historico:
+            historico = json.load(arquivo_historico)
         return historico
     except FileNotFoundError:
         print(f'ERR0: Arquivo "{arquivo_historico}" não encontrado.')

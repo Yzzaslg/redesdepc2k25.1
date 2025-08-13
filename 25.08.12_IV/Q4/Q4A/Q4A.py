@@ -59,6 +59,7 @@ while True:
                             if info_jogo:
                                 exibir_detalhes_jogo(info_jogo)
                                 historico.append({'nome': info_jogo['name'], 'app_id': app_id})
+                                print(f'Histórico atualizado: {historico}')
                             break
                         else:
                             print('ERR0: Opção inválida. Escolha um número válido.')
@@ -85,8 +86,7 @@ while True:
     # Carregar histórico de arquivo.
     elif opcao == 4:
         print('Carregando histórico...')
-        historico_json = 'historicosteam.json'
-        historico = carregar_historico(historico_json)
+        historico = carregar_historico(arquivo_historico)
         if historico:
             print(f'Histórico carregado com sucesso, ({len(historico)} registros).')
         else:
