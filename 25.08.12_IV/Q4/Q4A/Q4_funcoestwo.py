@@ -2,7 +2,7 @@ import os, sys, requests, json
 
 diretorio = os.path.dirname(__file__)
 
-arquivo_historico = 'historico_lyrcis.json'
+arquivo_historico = 'historicosteam.json'
 
 def menu_opcoes():
     print('\nBem-vindo ao programa steamgames!')
@@ -26,7 +26,7 @@ def buscar_jogo(nome_jogo): # Busca jogos na API da Steam pelo nome e retorna um
             if nome_jogo.lower() in jogo['name'].lower()]
         return jogos_encontrados
     except requests.Timeout:
-        print('ERR0: A requisição demorou demais e foi cancelada (timeout).')
+        print('ERR0: A requisição demorou mais do que esperado e foi cancelada (timeout).')
         return []
     except requests.RequestException as e:
         print(f'ERR0: Falha na requisição à API: {e}')
@@ -38,10 +38,10 @@ def consultar_app_id_jogo(app_id): # Busca informações de um jogo na Steam usa
         resposta = requests.get(URLsteam, timeout=10)
         resposta.raise_for_status()  # Gera erro se status_code != 200
         dicinfo_jogo = resposta.json()
-        if dicinfo_jogo.get(app_id, {}).get('success'): # 1º .get: pega a chave do jogo no JSON (cada jogo vem identificado pelo seu appid) e o 2º .get: verifica se a API indicou que a consulta foi bem-sucedida.
-            return dicinfo_jogo[app_id]['data']
+        if dicinfo_jogo.get(str(app_id), {}).get('success'): # 1º .get: pega a chave do jogo no JSON (cada jogo vem identificado pelo seu appid) e o 2º .get: verifica se a API indicou que a consulta foi bem-sucedida.
+            return dicinfo_jogo[str(app_id)]['data']
         else:
-            print('ERR0: Jogo não encontrado para este AppID.')
+            print(f'Nenhuma informação pública disponível para o jogo com AppID {app_id}, \npode haver restrição regional, de idade ou se o jogo foi removido/vendido de outra forma.')
             return None
     except requests.Timeout:
         print('ERR0: A requisição demorou demais e foi cancelada (ERR0: timeout).')
@@ -64,7 +64,7 @@ def atualizar_salvar_historico(historico, arquivo_historico):
     try:
         with open(historicosteam, 'w', encoding='utf-8') as arquivo_json:
             json.dump(historico, arquivo_json, ensure_ascii=False, indent=4)
-        print(f'Histórico atualizado e salvo no arquivo: "{historicosteam}" com sucesso!')
+        print(f'Histórico atualizado e salvo no arquivo: "{arquivo_historico}" com sucesso!')
     except Exception as e:
         sys.exit(f'ERR0: {e}')
 
